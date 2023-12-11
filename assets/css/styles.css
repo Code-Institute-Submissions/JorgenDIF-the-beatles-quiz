@@ -1,17 +1,65 @@
 /* Asterisk wildcard selector to override default styles added by the browser */
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Header styles */
+#head-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+#head-container img {
+  width: 100%;
+  height: auto;
+  margin-right: 20px;
+}
+#head-text {
+  text-align: center;
 }
 /* General styles */
 body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+/* main styles and center question */
+main {
+    background: url("../images/revolver-cover.jpg") no-repeat center center/cover;
+ 
+  flex: 1 0 auto;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
 
-/* put footer at the bottom of the page */
-main {
-    flex: 1 0 auto;
+
+/* Game Container styles */
+.game-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  height: 80vh;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
+/* Question styles */
+.question-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
