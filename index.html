@@ -7,36 +7,51 @@
     <title>The Beatles Quiz</title>
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-
 <body>
     <!-- The header and main menu -->
     <header>
-        <h2 id=head-text class="retro-style">All You Need Is Quiz</h2>
-    </header>
-    <div id="head-container">
-        <img src="assets/images/logo-beatles.jpeg" alt="the beatles logo">
-    </div>
-    
-        <!--The main content questions-->
-        <div class="game-container">
-            <div id="question-container" class="hide">
-                <div id="question">Question</div>
-                <div id="answer-container" class="button-grid">
-                    <button class="answer-button">Answer 1</button>
-                    <button class="answer-button">Answer 2</button>
-                    <button class="answer-button">Answer 3</button>
-                    <button class="answer-button">Answer 4</button>
-                </div>
-            </div>
-            <!--The controls-->
-            <div id="controls">
-                <button id="start-btn" class="start-btn btn">Start Quiz</button>
-                <button id="next-btn" class="next-btn btn">Next Question</button>
-                <button id="restart-btn" class="restart-btn btn">Restart Quiz</button>
-
-            </div>
+        <div id="head-container">
+            <h2 class="retro-text">All You Need Is Quiz</h2>
+            <img src="assets/images/logo-beatles (1).jpeg" alt="Beatles logo">
         </div>
 
+    </header>
+  
+
+    <!--The main content questions-->
+    <div id="rules-container">
+        <h2 id="rules">Rules</h2>
+        <p id="rules-text">Welcome to the Beatles Quiz! Test your Fab Four knowledge with three exciting difficulty
+            levels:
+            Easy: Fill in the missing word from iconic Beatles lyrics. Choose the right one from four options.
+            Medium: Identify the album a Beatles song belongs to. Pick the correct album from four choices.
+            Hard: Dive into challenging Beatles facts and trivia. Select the right answer from four options.
+            Press "Start Quiz," choose your difficulty, and get ready! Click "Next Question" to submit your answer and
+            move on to the next question. Music can be turned on/off at the bottom of the page.Good luck, and may your
+            Beatles knowledge shine!
+        </p>
+    </div>
+    <button id="start-btn" class="start-btn btn">Start Quiz</button>
+    <button id="hide-rules" class="hide-btn btn">Hide Rules</button>
+
+    <div id="game-container">
+        <div id="question-container" class="hide">
+            <div id="question">Question</div>
+            <div id="answer-container" class="button-grid">
+                <button class="answer-button">Answer 1</button>
+                <button class="answer-button">Answer 2</button>
+                <button class="answer-button">Answer 3</button>
+                <button class="answer-button">Answer 4</button>
+            </div>
+        </div>
+        <!--The controls-->
+        <div id="controls">
+            <button id="restart-btn" class="restart-btn btn">Restart Quiz</button>
+            <button id="next-btn" class="next-btn btn">Next Question</button>
+
+
+        </div>
+        </div>  
 
     <footer>
         <p>this is the footer</p>

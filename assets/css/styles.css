@@ -5,21 +5,16 @@
   box-sizing: border-box;
 }
 
-/* Header styles */
-#head-container {
+/* header styles */
+#head-container
+{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 20px;
-}
-#head-container img {
-  width: 100%;
-  height: auto;
-  margin-right: 20px;
-}
-#head-text {
-  text-align: center;
-}
+ }
+
+
 /* General styles */
 body {
   padding: 0;
@@ -28,23 +23,27 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 100vh;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-/* main styles and center question */
-main {
-  background: url("../images/revolver-cover.jpg") no-repeat center center/cover;
-  flex: 1 0 auto;
-  display: flex;
-  padding: 0;
-  margin: 0;
-  width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  background-color: blue
+ }
+
+
+
+/* rules container styles */
+#rules-container {
+  display: flex;  
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  max-width: 800px;
+  max-width: 80%;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 2px;
+  background-color: white;
+  margin: 20px 10px 10px 10px;
+  padding: 4em 2em;
+ 
 }
 
 /* Game Container styles */
@@ -53,7 +52,7 @@ main {
   max-width: 80%;
   border-radius: 5px;
   box-shadow: 0 0 10px 2px;
-  background-color: white;
+  background-color: yellow;
 }
 
 /* Question styles */
@@ -62,6 +61,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
 }
 
 /* Answer buttons styles */
@@ -99,7 +99,8 @@ main {
 
 .start-btn,
 .restart-btn,
-.next-btn {
+.next-btn,
+.hide-btn {
   padding: 5px 10px;
   border: 2px solid #000;
   border-radius: 5px;
@@ -109,7 +110,7 @@ main {
   transition: all 0.3s ease-in-out;
 }
 
-.start-btn:hover, .restart-btn:hover, .next-btn:hover {
+.start-btn:hover, .restart-btn:hover, .next-btn:hover, .hide-btn:hover {
   background-color: blue;
   color: #fff;
 }
