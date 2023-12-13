@@ -22,9 +22,15 @@
 }
 /* General styles */
 body {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  height: 80vh;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 /* main styles and center question */
 main {
@@ -43,15 +49,11 @@ main {
 
 /* Game Container styles */
 .game-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 80vw;
-  height: 80vh;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+ width: 800px;
+ max-width: 80%;
+ border-radius: 5px;
+ box-shadow: 0 0 10px 2px;
+ background-color: white;
 }
 
 /* Question styles */
@@ -62,4 +64,28 @@ main {
   align-items: center;
 }
 
-jjj
+/* Answer buttons styles */
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.answer-button {
+  padding: 10px 20px;
+  border: 2px solid #000;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.correct {
+  color: green;
+}
+
+.incorrect {
+  color: red;
+}

@@ -10,20 +10,23 @@
 
 <body>
     <!-- The header and main menu -->
-    <header> <h2 id=head-text class="retro-style">All You Need Is Quiz</h2>
-    </header> <div id="head-container"> 
-    <img src="assets/images/logo-beatles.jpeg" alt="the beatles logo"></div>
-    <main> 
+    <header>
+        <h2 id=head-text class="retro-style">All You Need Is Quiz</h2>
+    </header>
+    <div id="head-container">
+        <img src="assets/images/logo-beatles.jpeg" alt="the beatles logo">
+    </div>
+    
         <!--The main content questions-->
         <div class="game-container">
-            <div id="question-container">
-                Question</div>
-            <div id="question"></div>
-            <div id="answer-container">
-                <button class="answer-button">Answer 1</button>
-                <button class="answer-button">Answer 2</button>
-                <button class="answer-button">Answer 3</button>
-                <button class="answer-button">Answer 4</button>
+            <div id="question-container" class="hide">
+                <div id="question">Question</div>
+                <div id="answer-continer" class="button-grid">
+                    <button class="answer-button">Answer 1</button>
+                    <button class="answer-button">Answer 2</button>
+                    <button class="answer-button">Answer 3</button>
+                    <button class="answer-button">Answer 4</button>
+                </div>
             </div>
             <!--The controls-->
             <div id="controls">
@@ -32,18 +35,8 @@
                 <button id="restart-btn" class="restart-btn btn">Restart Quiz</button>
 
             </div>
-
-
-
-
-
-
-
-
         </div>
 
-    
-    </main>
 
     <footer>
         <p>this is the footer</p>
