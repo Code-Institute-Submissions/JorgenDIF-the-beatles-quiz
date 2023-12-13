@@ -45,8 +45,17 @@ body {
   padding: 4em 2em;
  
 }
-
+/* start and rules button styles */
 #start-rules-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  margin: 5px 0;
+}
+
+#game-level {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,6 +63,22 @@ body {
   padding: 20px;
   margin: 10px 0;
 }
+
+.level-button {
+  padding: 5px 5px;
+  border: 2px solid #000;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.level-button:hover {
+  background-color: red;
+  color: #fff;
+}
+
 
 /* Game Container styles */
 #game-container {
