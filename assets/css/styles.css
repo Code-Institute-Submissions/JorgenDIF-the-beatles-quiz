@@ -47,25 +47,15 @@ body {
 }
 /* start and rules button styles */
 #start-rules-btn-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+ display: relative;
   gap: 10px;
   padding: 20px;
   margin: 5px 0;
 }
 
-#game-level {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  padding: 20px;
-  margin: 10px 0;
-}
-
-.level-button {
-  padding: 5px 5px;
+.dropdown-btn {
+  display: none;
+  position: absolute;
   border: 2px solid #000;
   border-radius: 5px;
   background-color: #fff;
@@ -74,10 +64,22 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-.level-button:hover {
-  background-color: red;
+.dropdown-btn:hover, .dropdown-btn:focus {
+  background-color: blue;
   color: #fff;
 }
+
+.dropdown-btn a {
+  color: black;
+  padding: 12px 13px;
+  text-decoration: none;
+  display: block;
+}
+
+.show {display:block;}
+
+.dropdown-btn a:hover {background-color: #ddd;}
+
 
 
 /* Game Container styles */
