@@ -65,8 +65,8 @@ body {
 }
 
 .dropdown-btn:hover, .dropdown-btn:focus {
-  background-color: blue;
-  color: #fff;
+  
+  color: blue;
 }
 
 .dropdown-btn a {
@@ -78,8 +78,10 @@ body {
 
 .show {display:block;}
 
-.dropdown-btn a:hover {background-color: #ddd;}
-
+.dropdown-btn a:hover {
+  color: white;
+  background-color: blue;
+}
 
 
 /* Game Container styless */
