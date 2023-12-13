@@ -46,6 +46,15 @@ body {
  
 }
 
+#start-rules-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  margin: 10px 0;
+}
+
 /* Game Container styles */
 #game-container {
   width: 800px;
