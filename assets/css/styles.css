@@ -41,15 +41,15 @@ body {
   border-radius: 5px;
   box-shadow: 0 0 10px 2px;
   background-color: white;
-  margin: 20px 10px 10px 10px;
-  padding: 4em 2em;
+  margin: 10px 10px 10px 10px;
+  padding: 2em 2em;
  
 }
 /* start and rules button styles */
 #start-rules-btn-container {
  display: relative;
   gap: 10px;
-  padding: 20px;
+  padding: 10px;
   margin: 5px 0;
 }
 
@@ -83,6 +83,14 @@ body {
   background-color: blue;
 }
 
+#rules-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  margin: 10px 0;
+}
 
 /* Game Container styless */
 #game-container {
