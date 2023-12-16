@@ -1,35 +1,23 @@
 const questionContainerElement = document.getElementById("question-container");
 let shuffleQuestions, currentQuestionIndex;
 const questionElement = document.getElementById("question");
-const answerButtonsElement = document.getElementById("answer-buttons");
+const answerButtonsElement = document.getElementById("answer-container");
 
 
-// Start game function. Opens the dropdown and starts the game with the selected difficulty
+// Start game button. Opens the dropdown menu
 function openDropdown() {
     document.getElementById("diffDropdown").classList.toggle("show");
 }
 
+ // Start game with selected difficulty
 function startGame(difficulty) {
-   
-    console.log(`Starting game with difficulty: ${difficulty}`);
+   console.log(`Starting game with difficulty: ${difficulty}`);
+   shuffleQuestions = questions.filter(question => question.difficulty === difficulty);
+    currentQuestionIndex = 0;
+  setNextQuestion();
+  console.log('Shuffled Questions:', shuffleQuestions);
     
-    // Select the questions based on the difficulty
-    switch (difficulty) {
-      case 'Easy':
-        shuffleQuestions = easyQuestions.sort(() => Math.random() - 0.5);
-        break;
-      case 'Medium':
-        shuffleQuestions = mediumQuestions.sort(() => Math.random() - 0.5);
-        break;
-      case 'Hard':
-        shuffleQuestions = hardQuestions.sort(() => Math.random() - 0.5);
-        break;
-      default:
-        console.error(`Invalid difficulty: ${difficulty}`);
-        return;
-    }
-  
-   // Hide the dropdown
+ // Hide the dropdown
   document.getElementById("diffDropdown").classList.remove("show");
 }
 // Hide or show the rules
@@ -42,31 +30,44 @@ function hideRules() {
   }
 }
 
+function setNextQuestion() {
+  console.log('Current Question Index:', currentQuestionIndex);
+  showQuestion(shuffleQuestions[currentQuestionIndex]);
+}
+
+function showQuestion(question) {
+  
+  questionElement.innerText = question.question;
+}
+
+function selectAnswer() {
+
+}
 
 
-
-
-
-const easyQuestions = [
+const questions = [
+  {
+    difficulty: 'easy',
+    question: "Love, Love me ___?",
+    answers: [
+      { text: "do", correct: true },
+      { text: "to", correct: false },
+      { text: "more", correct: false },
+      { text: "true", correct: false }
+    ]
+  },
+  {
+    difficulty: 'easy',
+    question: "You say goodbye, and I say ___?",
+    answers: [
+      { text: "goodbye", correct: false },
+      { text: "hello", correct: true },
+      { text: "goodnight", correct: false },
+      { text: "goodmorning", correct: false }
+    ]
+  },
     {
-      question: "Love, Love me ___?",
-      answers: [
-        { text: "do", correct: true },
-        { text: "to", correct: false },
-        { text: "more", correct: false },
-        { text: "true", correct: false }
-      ]
-    },
-    {
-      question: "You say goodbye, and I say ___?",
-      answers: [
-        { text: "goodbye", correct: false },
-        { text: "hello", correct: true },
-        { text: "goodnight", correct: false },
-        { text: "goodmorning", correct: false }
-      ]
-    },
-    {
+      difficulty: 'easy',
       question: "I get by with a little help from my ___?",
       answers: [
         { text: "friends", correct: true },
@@ -76,6 +77,7 @@ const easyQuestions = [
       ]
     },
     {
+      difficulty: 'easy',
       question: "I wanna hold your ___?",
       answers: [
         { text: "hand", correct: true },
@@ -85,6 +87,7 @@ const easyQuestions = [
       ]
     },
     {
+      difficulty: 'easy',
       question: "All you need is ___?",
       answers: [
         { text: "love", correct: true },
@@ -92,11 +95,9 @@ const easyQuestions = [
         { text: "quiz", correct: false },
         { text: "friends", correct: false }
       ]
-    }
-  ];
-
-  const mediumQuestions = [
+    },
   {
+    difficulty: 'medium',
     question: 'Which album is the song "Can\'t Buy Me Love" on?',
     answers: [
       { text: "A Hard Day's Night", correct: true },
@@ -105,7 +106,7 @@ const easyQuestions = [
       { text: "With The Beatles", correct: false }
     ]
   },
-  {
+  {  difficulty: 'medium',
     question: 'Which album is the song "I Want To Hold Your Hand" on?',
     answers: [
       { text: "Meet The Beatles", correct: true },
@@ -114,7 +115,7 @@ const easyQuestions = [
       { text: "A Hard Day's Night", correct: false }
     ]
   },
-  {
+  {  difficulty: 'medium',
     question: 'Which album is the song "I am the Walrus" on?',
     answers: [
       { text: "Magical Mystery Tour", correct: true },
@@ -123,7 +124,7 @@ const easyQuestions = [
       { text: "Let It Be", correct: false }
     ]
   },
-  {
+  {   difficulty: 'medium',
     question: 'Which album is the song "Let It Be" on?',
     answers: [
       { text: "Let It Be", correct: true },
@@ -132,7 +133,7 @@ const easyQuestions = [
       { text: "Yellow Submarine", correct: false }
     ]
   },
-  {
+  {    difficulty: 'medium',
     question: 'Which album is the song "I Feel Fine" on?',
     answers: [
       { text: "Beatles For Sale", correct: true },
@@ -140,11 +141,9 @@ const easyQuestions = [
       { text: "A Hard Day's Night", correct: false },
       { text: "With The Beatles", correct: false }
     ]
-  }
-];
+  },
 
-const hardQuestions = [
-  {
+{   difficulty: 'hard',
     question: "Who was the Beatles original drummer?",
     answers: [
       { text: "Ringo Starr", correct: false },
@@ -153,7 +152,7 @@ const hardQuestions = [
       { text: "Charlie Watts", correct: false }
     ]
   },
-  {
+  {     difficulty: 'hard',
     question: "Who was the oldest Beatle?",
     answers: [
       { text: "John Lennon", correct: false },
@@ -161,8 +160,8 @@ const hardQuestions = [
       { text: "George Harrison", correct: false },
       { text: "Ringo Starr", correct: true }
     ]
-  },
-  {
+  },  
+  {   difficulty: 'hard',
     question: "Which Beatle was the first to get married?",
     answers: [
       { text: "John Lennon", correct: true },
@@ -171,7 +170,7 @@ const hardQuestions = [
       { text: "Ringo Starr", correct: false }
     ]
   },
-  {
+  {     difficulty: 'hard',
     question: "How many number one albums did the Beatles have in the UK?",
     answers: [
       { text: "15", correct: true },
@@ -180,7 +179,7 @@ const hardQuestions = [
       { text: "25", correct: false }
     ]
   },
-  {
+  {      difficulty: 'hard',
     question: 'What is Ringo Starr\'s real name?',
     answers: [
       { text: "Richard Starkey", correct: true },
