@@ -92,7 +92,7 @@ body {
   margin: 10px 0;
 }
 
-/* Game Container styless */
+/* Game Container styles */
 #game-container {
   width: 800px;
   max-width: 80%;
@@ -168,4 +168,9 @@ body {
   gap: 10px;
   padding: 20px;
   margin: 10px 0;
+}
+
+.start-btn, .dropdown-btn, .hide-btn, .next-btn {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
