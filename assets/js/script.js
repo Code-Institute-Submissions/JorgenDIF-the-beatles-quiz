@@ -6,7 +6,9 @@ const questionElement = document.getElementById("question");
 const answerButtonsElement = document.getElementById("answer-buttons");
 const gameContainer = document.getElementById("game-container");
 let score = 0;
-// The questions for the game
+let incorrect = 0;
+let answeredQuestions = [];
+
 const questions = [
   {
     difficulty: "Easy",
@@ -16,7 +18,7 @@ const questions = [
       { text: "to", correct: false },
       { text: "more", correct: false },
       { text: "true", correct: false },
-    ],
+    ]
   },
   {
     difficulty: "Easy",
@@ -108,7 +110,6 @@ const questions = [
       { text: "With The Beatles", correct: false },
     ],
   },
-
   {
     difficulty: "Hard",
     question: "Who was the Beatles original drummer?",
@@ -166,8 +167,10 @@ function openDropdown() {
   document.getElementById("diffDropdown").classList.toggle("show");
 }
 
-// Start game with selected difficulty
+
+
 function startGame(difficulty) {
+  resetGame(); // Reset the game, including the score
   console.log(`Starting game with difficulty: ${difficulty}`);
   startButton.innerText = "Restart";
   gameContainer.classList.remove("hide");
@@ -176,12 +179,19 @@ function startGame(difficulty) {
     .sort(() => Math.random() - 0.5);
   currentQuestionIndex = 0;
   setNextQuestion();
-  
-  console.log("Shuffled Questions:", shuffleQuestions);
 
   // Hide the dropdown
   document.getElementById("diffDropdown").classList.remove("show");
 }
+
+// Add this function to reset the game
+function resetGame() {
+  score = 0;
+  scoreElement.innerText = score;
+  incorrect = 0;
+  incorrectElement.innerText = incorrect;
+}
+
 document.addEventListener("click", function (e) {
   const diffDropdown = document.getElementById("diffDropdown");
   const startBtn = document.getElementById("start-btn");
@@ -207,27 +217,27 @@ function setNextQuestion() {
   resetState();
   showQuestion(shuffleQuestions[currentQuestionIndex]);
   currentQuestionIndex++;
-  if (shuffleQuestions.length > currentQuestionIndex + 1) {
+  if (shuffleQuestions.length > currentQuestionIndex) {
     nextButton.classList.remove("hide");
   } else {
     startButton.innerText = "Restart";
     startButton.classList.remove("hide");
   }
+}
 
-  // Show the question and answers
-  function showQuestion(question) {
-    questionElement.innerText = question.question;
-    question.answers.forEach((answer) => {
-      const button = document.createElement("button");
-      button.innerText = answer.text;
-      button.classList.add("btn");
-      if (answer.correct) {
-        button.dataset.correct = answer.correct;
-      }
-      button.addEventListener("click", selectAnswer);
-      answerButtonsElement.appendChild(button);
-    });
-  }
+// Show the question and answers
+function showQuestion(question) {
+  questionElement.innerText = question.question;
+  question.answers.forEach((answer) => {
+    const button = document.createElement("button");
+    button.innerText = answer.text;
+    button.classList.add("btn");
+    if (answer.correct) {
+      button.dataset.correct = answer.correct;
+    }
+    button.addEventListener("click", () => selectAnswer(answer));
+    answerButtonsElement.appendChild(button);
+  });
 }
 
 // Reset the state of the game
@@ -239,12 +249,33 @@ function resetState() {
 }
 
 // Select the answer
-function selectAnswer(e) {
-  const selectedButton = e.target;
-  const correct = selectedButton.dataset.correct;
+function selectAnswer(answer) {
+  if (answeredQuestions.includes(currentQuestionIndex)) {
+    // User already answered this question
+    return;
+  }
+
+  const correct = answer.correct;
+  answeredQuestions.push(currentQuestionIndex);
+
   Array.from(answerButtonsElement.children).forEach(function (button) {
     setStatusClass(button, button.dataset.correct);
   });
+
+  if (correct) {
+    incrementScore();
+  } else {
+    incrementWrongAnswer();
+  }
+
+  if (shuffleQuestions.length > currentQuestionIndex) {
+    nextButton.classList.remove("hide");
+  } else {
+    startButton.innerText = "Restart";
+    startButton.classList.remove("hide");
+    // Optionally reset the score here as well if needed
+    score = 0;
+  }
 }
 
 // Set the status of the answer
@@ -252,12 +283,9 @@ function setStatusClass(element, correct) {
   clearStatusClass(element);
   if (correct) {
     element.classList.add("correct");
-    
-   
-   
   } else {
     element.classList.add("wrong");
-}
+  }
 }
 
 // Clear the status of the answer
@@ -266,3 +294,16 @@ function clearStatusClass(element) {
   element.classList.remove("wrong");
 }
 
+// Scoreboard
+let scoreElement = document.getElementById("score");
+let incorrectElement = document.getElementById("incorrect");
+
+function incrementScore() {
+  score++;
+  scoreElement.innerText = score;
+}
+
+function incrementWrongAnswer() {
+  incorrect++;
+  incorrectElement.innerText = incorrect;
+}
