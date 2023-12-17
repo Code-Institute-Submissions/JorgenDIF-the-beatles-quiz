@@ -190,6 +190,11 @@ function hideRules() {
 function setNextQuestion() {
   resetState();
   showQuestion(shuffleQuestions[currentQuestionIndex]);
+  currentQuestionIndex++;
+  // If there are no more questions, show the score
+  if (shuffleQuestions.length <= currentQuestionIndex) {
+    showScore();
+  }
 
   function showQuestion(question) {
     questionElement.innerText = question.question;
@@ -215,9 +220,8 @@ function resetState() {
 }
 
 function selectAnswer(e) {
-  const selectedButton = e.target;
+const selectedButton = e.target;
   const correct = selectedButton.dataset.correct;
-  
   Array.from(answerButtonsElement.children).forEach(function (button) {
       setStatusClass(button, button.dataset.correct);
     });
