@@ -189,7 +189,6 @@ document.addEventListener("click", function (e) {
   }
 });
 
-
 // Hide or show the rules
 function hideRules() {
   let rules = document.getElementById("rules-container");
@@ -199,11 +198,12 @@ function hideRules() {
     rules.style.display = "none";
   }
 }
+
+// set next question
 function setNextQuestion() {
   resetState();
   showQuestion(shuffleQuestions[currentQuestionIndex]);
   currentQuestionIndex++;
-  // If there are no more questions, show the score
   if (shuffleQuestions.length > currentQuestionIndex + 1) {
     nextButton.classList.remove("hide");
   } else {
@@ -211,6 +211,7 @@ function setNextQuestion() {
     startButton.classList.remove("hide");
   }
 
+  // Show the question and answers
   function showQuestion(question) {
     questionElement.innerText = question.question;
     question.answers.forEach((answer) => {
@@ -226,7 +227,7 @@ function setNextQuestion() {
   }
 }
 
-
+// Reset the state of the game
 function resetState() {
   nextButton.classList.add("hide");
   while (answerButtonsElement.firstChild) {
@@ -234,14 +235,16 @@ function resetState() {
   }
 }
 
+// Select the answer
 function selectAnswer(e) {
-const selectedButton = e.target;
+  const selectedButton = e.target;
   const correct = selectedButton.dataset.correct;
   Array.from(answerButtonsElement.children).forEach(function (button) {
-      setStatusClass(button, button.dataset.correct);
-    });
+    setStatusClass(button, button.dataset.correct);
+  });
 }
 
+// Set the status of the answer
 function setStatusClass(element, correct) {
   clearStatusClass(element);
   if (correct) {
@@ -251,6 +254,7 @@ function setStatusClass(element, correct) {
   }
 }
 
+// Clear the status of the answer
 function clearStatusClass(element) {
   element.classList.remove("correct");
   element.classList.remove("wrong");
