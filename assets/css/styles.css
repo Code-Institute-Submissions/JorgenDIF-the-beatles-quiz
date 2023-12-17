@@ -130,11 +130,11 @@ body {
 }
 
 .correct {
-  color: green;
+  background-color: green;
 }
 
-.incorrect {
-  color: red;
+.wrong {
+  background-color: red;
 }
 
 .btn:hover {
