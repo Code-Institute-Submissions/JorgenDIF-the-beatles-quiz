@@ -188,5 +188,25 @@ body {
   display: none;
 }
 
+#score-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #000;
+  border-radius: 5px;
+  background-color: #fff;
+}
 
+#score {
+  color: green;
+  font-weight: bold;
+}
+
+#incorrect {
+  color: red;
+  font-weight: bold;
+}
 
