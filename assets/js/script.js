@@ -4,7 +4,7 @@ const questionContainerElement = document.getElementById("question-container");
 let shuffleQuestions, currentQuestionIndex;
 const questionElement = document.getElementById("question");
 const answerButtonsElement = document.getElementById("answer-buttons");
-
+const gameContainer = document.getElementById("game-container");
 // The questions for the game
 const questions = [
   {
@@ -168,12 +168,14 @@ function openDropdown() {
 // Start game with selected difficulty
 function startGame(difficulty) {
   console.log(`Starting game with difficulty: ${difficulty}`);
+  startButton.innerText = "Restart";
+  gameContainer.classList.remove("hide");
   shuffleQuestions = questions
     .filter((question) => question.difficulty === difficulty)
     .sort(() => Math.random() - 0.5);
   currentQuestionIndex = 0;
   setNextQuestion();
-  questionContainerElement.classList.remove("hide");
+  
   console.log("Shuffled Questions:", shuffleQuestions);
 
   // Hide the dropdown
