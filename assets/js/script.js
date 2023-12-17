@@ -173,11 +173,23 @@ function startGame(difficulty) {
     .sort(() => Math.random() - 0.5);
   currentQuestionIndex = 0;
   setNextQuestion();
+  questionContainerElement.classList.remove("hide");
   console.log("Shuffled Questions:", shuffleQuestions);
 
   // Hide the dropdown
   document.getElementById("diffDropdown").classList.remove("show");
 }
+document.addEventListener("click", function (e) {
+  const diffDropdown = document.getElementById("diffDropdown");
+  const startBtn = document.getElementById("start-btn");
+
+  // Check if the clicked element is not the start button or the dropdown
+  if (!startBtn.contains(e.target) && !diffDropdown.contains(e.target)) {
+    diffDropdown.classList.remove("show");
+  }
+});
+
+
 // Hide or show the rules
 function hideRules() {
   let rules = document.getElementById("rules-container");
