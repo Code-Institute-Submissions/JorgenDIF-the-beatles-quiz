@@ -5,6 +5,7 @@ let shuffleQuestions, currentQuestionIndex;
 const questionElement = document.getElementById("question");
 const answerButtonsElement = document.getElementById("answer-buttons");
 const gameContainer = document.getElementById("game-container");
+let score = 0;
 // The questions for the game
 const questions = [
   {
@@ -251,9 +252,12 @@ function setStatusClass(element, correct) {
   clearStatusClass(element);
   if (correct) {
     element.classList.add("correct");
+    
+   
+   
   } else {
     element.classList.add("wrong");
-  }
+}
 }
 
 // Clear the status of the answer
@@ -261,3 +265,4 @@ function clearStatusClass(element) {
   element.classList.remove("correct");
   element.classList.remove("wrong");
 }
+

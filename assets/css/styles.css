@@ -143,6 +143,7 @@ body {
   color: #fff;
 }
 
+
 /* Start,restart and next button styles */
 
 .start-btn,
@@ -186,3 +187,6 @@ body {
 .hide {
   display: none;
 }
+
+
+
