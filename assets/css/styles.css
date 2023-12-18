@@ -59,6 +59,11 @@ body {
   font-weight: bold;
 }
 
+.start-next-text {
+  font-weight: bold;
+  
+}
+
 /* start and rules button styles */
 #start-rules-btn-container {
   gap: 10px;
