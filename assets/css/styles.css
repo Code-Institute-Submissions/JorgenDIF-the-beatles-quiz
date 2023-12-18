@@ -23,7 +23,8 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: blue;
+  background: url("../images/luxa.org-opacity-changed-alphacodersrevolverwallpaperopacity.jpeg")
+    no-repeat center center/cover;
 }
 
 /* rules container styles */
@@ -33,7 +34,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  width: 800px;
+  width: 400px;
   max-width: 80%;
   border-radius: 5px;
   box-shadow: 0 0 10px 2px;
@@ -44,17 +45,17 @@ body {
 
 /* difficulty level  in rules styles */
 #easy {
-  color: #00BC5D;
+  color: #00bc5d;
   font-weight: bold;
 }
 
 #medium {
-  color: #F38500;
+  color: #f38500;
   font-weight: bold;
 }
 
 #hard {
-  color: #FF453A;
+  color: #ff453a;
   font-weight: bold;
 }
 
@@ -159,7 +160,6 @@ body {
   background-color: green;
   color: #fff;
 }
-
 
 /* Start,restart and next button styles */
 
