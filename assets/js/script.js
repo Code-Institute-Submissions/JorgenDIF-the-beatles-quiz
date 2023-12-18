@@ -250,6 +250,7 @@ function resetState() {
 
 // Select the answer
 function selectAnswer(answer) {
+  
   if (answeredQuestions.includes(currentQuestionIndex)) {
     // User already answered this question
     return;
