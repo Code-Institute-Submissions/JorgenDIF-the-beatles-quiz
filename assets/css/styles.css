@@ -33,7 +33,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 800px;
+  width: 800px;
   max-width: 80%;
   border-radius: 5px;
   box-shadow: 0 0 10px 2px;
@@ -225,4 +225,13 @@ body {
 #incorrect {
   color: red;
   font-weight: bold;
+}
+
+#music-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  margin: 10px 0;
 }
