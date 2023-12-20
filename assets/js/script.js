@@ -191,7 +191,6 @@ function resetGame() {
   scoreElement.innerText = score;
   incorrect = 0;
   incorrectElement.innerText = incorrect;
-  answeredQuestions = [];
 }
 
 document.addEventListener("click", function (e) {

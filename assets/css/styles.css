@@ -176,8 +176,8 @@ body {
 }
 
 .btn:hover {
-  background-color: green;
-  color: #fff;
+  transform:scale(1.15);
+  transition: all 0.3s ease-in-out;
 }
 
 /* Start,restart and next button styles */
