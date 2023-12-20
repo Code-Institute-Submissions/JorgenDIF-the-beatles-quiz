@@ -177,6 +177,7 @@ function startGame(difficulty) {
   shuffleQuestions = questions
     .filter((question) => question.difficulty === difficulty)
     .sort(() => Math.random() - 0.5);
+    shuffleQuestions = shuffleQuestions.slice(0, 3);
   currentQuestionIndex = 0;
   setNextQuestion();
 
@@ -190,6 +191,7 @@ function resetGame() {
   scoreElement.innerText = score;
   incorrect = 0;
   incorrectElement.innerText = incorrect;
+  answeredQuestions = [];
 }
 
 document.addEventListener("click", function (e) {
@@ -274,7 +276,6 @@ function selectAnswer(answer) {
   } else {
     startButton.innerText = "Restart";
     startButton.classList.remove("hide");
-    // Optionally reset the score here as well if needed
     score = 0;
   }
 }
