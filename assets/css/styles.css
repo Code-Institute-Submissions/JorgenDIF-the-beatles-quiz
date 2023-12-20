@@ -195,13 +195,7 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-.start-btn:hover,
-.restart-btn:hover,
-.next-btn:hover,
-.hide-btn:hover {
-  background-color: blue;
-  color: #fff;
-}
+
 
 #controls {
   display: flex;
