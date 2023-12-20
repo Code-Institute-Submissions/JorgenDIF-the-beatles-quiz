@@ -240,6 +240,7 @@ function showQuestion(question) {
     button.addEventListener("click", () => selectAnswer(answer));
     answerButtonsElement.appendChild(button);
   });
+
 }
 
 // Reset the state of the game
@@ -282,7 +283,10 @@ function selectAnswer(answer) {
     startButton.classList.remove("hide");
     score = 0;
     console.log("Game over. Score reset.");
+    showScore();
+    console.log("Scoreboard shown");
   }
+
 }
 
 // Set the status of the answer
@@ -313,4 +317,10 @@ function incrementScore() {
 function incrementWrongAnswer() {
   incorrect++;
   incorrectElement.innerText = incorrect;
+}
+
+function showScore() {
+  let scoreBoard = document.getElementById("score");
+  confirm(`Your score is ${score} out of 3!`);
+  
 }
