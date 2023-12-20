@@ -185,12 +185,13 @@ function startGame(difficulty) {
   document.getElementById("diffDropdown").classList.remove("show");
 }
 
-// Add this function to reset the game
+//  Function to reset the game
 function resetGame() {
   score = 0;
   scoreElement.innerText = score;
   incorrect = 0;
   incorrectElement.innerText = incorrect;
+  answeredQuestions = [];
 }
 
 document.addEventListener("click", function (e) {
@@ -251,9 +252,11 @@ function resetState() {
 
 // Select the answer
 function selectAnswer(answer) {
-  
+  console.log("Clicked answer:", answer);
+
   if (answeredQuestions.includes(currentQuestionIndex)) {
     // User already answered this question
+    console.log("User already answered this question");
     return;
   }
 
@@ -266,8 +269,10 @@ function selectAnswer(answer) {
 
   if (correct) {
     incrementScore();
+    console.log("Correct answer!");
   } else {
     incrementWrongAnswer();
+    console.log("Wrong answer!");
   }
 
   if (shuffleQuestions.length > currentQuestionIndex) {
@@ -276,6 +281,7 @@ function selectAnswer(answer) {
     startButton.innerText = "Restart";
     startButton.classList.remove("hide");
     score = 0;
+    console.log("Game over. Score reset.");
   }
 }
 
