@@ -281,7 +281,7 @@ function selectAnswer(answer) {
   } else {
     startButton.innerText = "Restart";
     startButton.classList.remove("hide");
-    score = 0;
+   
     console.log("Game over. Score reset.");
     showScore();
     console.log("Scoreboard shown");
