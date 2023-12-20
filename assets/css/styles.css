@@ -33,7 +33,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  max-width: 80%;
   width: 400px;
   max-width: 80%;
   border-radius: 5px;
@@ -61,7 +61,7 @@ body {
 
 .start-next-text {
   font-weight: bold;
-  
+
 }
 
 /* start and rules button styles */
@@ -116,11 +116,11 @@ body {
 
 /* Game Container styles */
 #game-container {
-  width: 800px;
+  width: 400px;
   max-width: 80%;
   border-radius: 5px;
   box-shadow: 0 0 10px 2px;
-  background-color: yellow;
+  background-color: white;
   padding: 10px;
 }
 
@@ -132,12 +132,24 @@ body {
   align-items: center;
 }
 
+#question {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+}
+
 /* Answer buttons styles */
 .button-grid {
   display: grid;
   grid-template-columns: repeat(2, auto);
   gap: 10px;
   margin: 20px 0;
+}
+
+#answer-buttons {
+  font-weight: 500;
+
 }
 
 .btn {
