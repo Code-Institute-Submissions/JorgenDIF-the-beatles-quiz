@@ -289,8 +289,9 @@ function selectAnswer(answer) {
   if (answeredQuestions.length === shuffleQuestions.length) {
     localStorage.setItem("mostRecentScore", score);
     //go to the end page
-    return window.location.assign("/end.html");
+    return window.location.assign("/test.html");
   }
+  console.log("end of selectAnswer");
 }
 
 // Set the status of the answer
