@@ -173,6 +173,7 @@ function startGame(difficulty) {
   resetGame(); // Reset the game, including the score
   console.log(`Starting game with difficulty: ${difficulty}`);
   startButton.innerText = "Restart";
+  nextButton.disabled = true;
   gameContainer.classList.remove("hide");
   shuffleQuestions = questions
     .filter((question) => question.difficulty === difficulty)
@@ -216,7 +217,8 @@ function hideRules() {
 
 // set next question
 function setNextQuestion() {
-  resetState();
+resetState();
+nextButton.disabled = true;
   showQuestion(shuffleQuestions[currentQuestionIndex]);
   currentQuestionIndex++;
   if (shuffleQuestions.length > currentQuestionIndex) {
@@ -254,6 +256,7 @@ function resetState() {
 // Select the answer
 function selectAnswer(answer) {
   console.log("Clicked answer:", answer);
+  nextButton.disabled = false;
 
   if (answeredQuestions.includes(currentQuestionIndex)) {
     // User already answered this question
@@ -276,18 +279,14 @@ function selectAnswer(answer) {
     console.log("Wrong answer!");
   }
 
-  if (shuffleQuestions.length > currentQuestionIndex) {
-    nextButton.classList.remove("hide");
-  } else {
-    startButton.innerText = "Restart";
-    startButton.classList.remove("hide");
-   
-    console.log("Game over. Score reset.");
+  // Check if all questions have been answered
+  if (answeredQuestions.length === shuffleQuestions.length) {
+    // All questions have been answered, show the score
     showScore();
-    console.log("Scoreboard shown");
+    console.log("All questions have been answered");
   }
-
 }
+  
 
 // Set the status of the answer
 function setStatusClass(element, correct) {
@@ -297,7 +296,12 @@ function setStatusClass(element, correct) {
   } else {
     element.classList.add("wrong");
   }
+
+console.log("Correct answer:", question.correct);
+
 }
+
+
 
 // Clear the status of the answer
 function clearStatusClass(element) {
@@ -312,15 +316,21 @@ let incorrectElement = document.getElementById("incorrect");
 function incrementScore() {
   score++;
   scoreElement.innerText = score;
+  
+  console.log("Score:", score);
 }
 
 function incrementWrongAnswer() {
   incorrect++;
   incorrectElement.innerText = incorrect;
+
+  console.log("Incorrect:", incorrect);
 }
 
 function showScore() {
   let scoreBoard = document.getElementById("score");
-  confirm(`Your score is ${score} out of 3!`);
+  window.confirm("Your score is: " + score + " out of 3");
+
+  console.log(window.confirm);
   
 }
