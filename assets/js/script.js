@@ -287,10 +287,11 @@ function selectAnswer(answer) {
 
   // Check if all questions have been answered
   if (answeredQuestions.length === shuffleQuestions.length) {
-    // All questions have been answered, show the score
-    showScore();
-    console.log("All questions have been answered");
-  }
+    localStorage.setItem("mostRecentScore", score);
+    //go to the end page
+    return window.location.assign("/end.html");
+    
+    }
 }
   
 
@@ -333,18 +334,5 @@ function incrementWrongAnswer() {
   console.log("Incorrect:", incorrect);
 }
 
-function showScore() {
-  let signedIn = window.confirm("Please sign in to view your score.");
-  
-  console.log("User signed in:", signedIn);
 
-  
-  if (signedIn) {
-    let scoreBoard = document.getElementById("score");
-    window.confirm("Your score is: " + score + " out of 5");
-    console.log(window.confirm);
-  } else {
-    // Handle the case when the user chooses not to sign in
-    console.log("User chose not to sign in.");
-  }
-}
+

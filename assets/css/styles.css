@@ -129,6 +129,12 @@ body {
   padding: 10px;
 }
 
+#timer {
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 10px;
+}
+
 #question-number{
  font-weight: bold;
 }
@@ -260,4 +266,17 @@ body {
   gap: 10px;
   padding: 10px;
   margin: 10px 0;
+}
+
+#end-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #000;
+  border-radius: 5px;
+  background-color: #fff;
 }
