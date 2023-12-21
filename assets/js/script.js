@@ -1,3 +1,4 @@
+// The varibles
 const startButton = document.getElementById("start-btn");
 const nextButton = document.getElementById("next-btn");
 const questionContainerElement = document.getElementById("question-container");
@@ -9,6 +10,7 @@ let score = 0;
 let incorrect = 0;
 let answeredQuestions = [];
 
+// The questions
 const questions = [
   {
     difficulty: "Easy",
@@ -178,7 +180,7 @@ function startGame(difficulty) {
   shuffleQuestions = questions
     .filter((question) => question.difficulty === difficulty)
     .sort(() => Math.random() - 0.5);
-    shuffleQuestions = shuffleQuestions.slice(0, 3);
+    shuffleQuestions = shuffleQuestions.slice(0, 5);
   currentQuestionIndex = 0;
   setNextQuestion();
 
@@ -335,7 +337,7 @@ function showScore() {
   
   if (signedIn) {
     let scoreBoard = document.getElementById("score");
-    window.confirm("Your score is: " + score + " out of 3");
+    window.confirm("Your score is: " + score + " out of 5");
     console.log(window.confirm);
   } else {
     // Handle the case when the user chooses not to sign in
