@@ -186,6 +186,8 @@ function startGame(difficulty) {
   currentQuestionIndex = 0;
   currentQuestionNumber = 1;
   setNextQuestion();
+  hideRules();
+  
 
   // Hide the dropdown
   document.getElementById("diffDropdown").classList.remove("show");
