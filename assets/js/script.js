@@ -289,7 +289,7 @@ function selectAnswer(answer) {
   if (answeredQuestions.length === shuffleQuestions.length) {
     localStorage.setItem("mostRecentScore", score);
     //go to the end page
-    return window.location.assign("/test.html");
+    return window.location.assign("end.html");
   }
   console.log("assign to end page");
 }
