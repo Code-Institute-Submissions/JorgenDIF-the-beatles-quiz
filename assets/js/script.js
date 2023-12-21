@@ -328,9 +328,17 @@ function incrementWrongAnswer() {
 }
 
 function showScore() {
-  let scoreBoard = document.getElementById("score");
-  window.confirm("Your score is: " + score + " out of 3");
-
-  console.log(window.confirm);
+  let signedIn = window.confirm("Please sign in to view your score.");
   
+  console.log("User signed in:", signedIn);
+
+  
+  if (signedIn) {
+    let scoreBoard = document.getElementById("score");
+    window.confirm("Your score is: " + score + " out of 3");
+    console.log(window.confirm);
+  } else {
+    // Handle the case when the user chooses not to sign in
+    console.log("User chose not to sign in.");
+  }
 }
