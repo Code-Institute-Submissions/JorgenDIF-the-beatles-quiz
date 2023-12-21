@@ -291,7 +291,7 @@ function selectAnswer(answer) {
     //go to the end page
     return window.location.assign("/test.html");
   }
-  console.log("end of selectAnswer");
+  console.log("assign to end page");
 }
 
 // Set the status of the answer
