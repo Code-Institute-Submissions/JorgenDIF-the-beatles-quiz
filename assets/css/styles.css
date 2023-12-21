@@ -129,6 +129,12 @@ body {
   padding: 10px;
 }
 
+#question-number{
+  border: 3px solid #000;
+  border-radius: 5px;
+  padding: 5px;
+}
+
 /* Question styles */
 #question-container {
   display: flex;

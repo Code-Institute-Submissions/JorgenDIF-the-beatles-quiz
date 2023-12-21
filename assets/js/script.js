@@ -6,6 +6,7 @@ let shuffleQuestions, currentQuestionIndex;
 const questionElement = document.getElementById("question");
 const answerButtonsElement = document.getElementById("answer-buttons");
 const gameContainer = document.getElementById("game-container");
+let currentQuestionNumber= 1
 let score = 0;
 let incorrect = 0;
 let answeredQuestions = [];
@@ -182,6 +183,7 @@ function startGame(difficulty) {
     .sort(() => Math.random() - 0.5);
     shuffleQuestions = shuffleQuestions.slice(0, 5);
   currentQuestionIndex = 0;
+  currentQuestionNumber = 1;
   setNextQuestion();
 
   // Hide the dropdown
@@ -221,6 +223,7 @@ function hideRules() {
 function setNextQuestion() {
 resetState();
 nextButton.disabled = true;
+document.getElementById("question-number").innerText = currentQuestionNumber;
   showQuestion(shuffleQuestions[currentQuestionIndex]);
   currentQuestionIndex++;
   if (shuffleQuestions.length > currentQuestionIndex) {
@@ -234,6 +237,7 @@ nextButton.disabled = true;
 // Show the question and answers
 function showQuestion(question) {
   questionElement.innerText = question.question;
+  currentQuestionNumber++;
   question.answers.forEach((answer) => {
     const button = document.createElement("button");
     button.innerText = answer.text;
