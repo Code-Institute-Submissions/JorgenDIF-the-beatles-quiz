@@ -130,9 +130,7 @@ body {
 }
 
 #question-number{
-  border: 3px solid #000;
-  border-radius: 5px;
-  padding: 5px;
+ font-weight: bold;
 }
 
 /* Question styles */
