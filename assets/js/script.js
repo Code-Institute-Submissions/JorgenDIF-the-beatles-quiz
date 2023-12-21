@@ -6,7 +6,7 @@ let shuffleQuestions, currentQuestionIndex;
 const questionElement = document.getElementById("question");
 const answerButtonsElement = document.getElementById("answer-buttons");
 const gameContainer = document.getElementById("game-container");
-let currentQuestionNumber= 1
+let currentQuestionNumber = 1;
 let score = 0;
 let incorrect = 0;
 let answeredQuestions = [];
@@ -21,7 +21,7 @@ const questions = [
       { text: "to", correct: false },
       { text: "more", correct: false },
       { text: "true", correct: false },
-    ]
+    ],
   },
   {
     difficulty: "Easy",
@@ -165,13 +165,14 @@ const questions = [
   },
 ];
 
-// Start game button. Opens the dropdown menu
+//  Opens the dropdown menu
 function openDropdown() {
   document.getElementById("diffDropdown").classList.toggle("show");
 }
-
-
-
+/**
+ * 
+ * @param {string} difficulty 
+ */
 function startGame(difficulty) {
   resetGame(); // Reset the game, including the score
   console.log(`Starting game with difficulty: ${difficulty}`);
@@ -181,7 +182,7 @@ function startGame(difficulty) {
   shuffleQuestions = questions
     .filter((question) => question.difficulty === difficulty)
     .sort(() => Math.random() - 0.5);
-    shuffleQuestions = shuffleQuestions.slice(0, 5);
+  shuffleQuestions = shuffleQuestions.slice(0, 5);
   currentQuestionIndex = 0;
   currentQuestionNumber = 1;
   setNextQuestion();
@@ -221,9 +222,9 @@ function hideRules() {
 
 // set next question
 function setNextQuestion() {
-resetState();
-nextButton.disabled = true;
-document.getElementById("question-number").innerText = currentQuestionNumber;
+  resetState();
+  nextButton.disabled = true;
+  document.getElementById("question-number").innerText = currentQuestionNumber;
   showQuestion(shuffleQuestions[currentQuestionIndex]);
   currentQuestionIndex++;
   if (shuffleQuestions.length > currentQuestionIndex) {
@@ -248,7 +249,6 @@ function showQuestion(question) {
     button.addEventListener("click", () => selectAnswer(answer));
     answerButtonsElement.appendChild(button);
   });
-
 }
 
 // Reset the state of the game
@@ -290,10 +290,8 @@ function selectAnswer(answer) {
     localStorage.setItem("mostRecentScore", score);
     //go to the end page
     return window.location.assign("/end.html");
-    
-    }
+  }
 }
-  
 
 // Set the status of the answer
 function setStatusClass(element, correct) {
@@ -304,11 +302,8 @@ function setStatusClass(element, correct) {
     element.classList.add("wrong");
   }
 
-console.log("Correct answer:", question.correct);
-
+  console.log("Correct answer:", question.correct);
 }
-
-
 
 // Clear the status of the answer
 function clearStatusClass(element) {
@@ -323,7 +318,7 @@ let incorrectElement = document.getElementById("incorrect");
 function incrementScore() {
   score++;
   scoreElement.innerText = score;
-  
+
   console.log("Score:", score);
 }
 
@@ -333,6 +328,3 @@ function incrementWrongAnswer() {
 
   console.log("Incorrect:", incorrect);
 }
-
-
-
