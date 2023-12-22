@@ -309,11 +309,14 @@ function setStatusClass(element, correct) {
   clearStatusClass(element);
   if (correct) {
     element.classList.add("correct");
+    stopTimer();
+   
   } else {
     element.classList.add("wrong");
   }
 
   console.log("Correct answer:", question.correct);
+  
 }
 
 // Clear the status of the answer
@@ -340,20 +343,32 @@ function incrementWrongAnswer() {
   console.log("Incorrect:", incorrect);
 }
 
-// Timer
-
+// Start Timer
 function startTimer() {
   clearInterval(timer);
   sec = 10;
   timer = setInterval(() => {
  document.getElementById("timer").innerHTML = sec ;
   sec--;
-  if (sec == -1) {
-    clearInterval(timer);
-    alert("Time is up!");
-   
-  }
-},1000);
+    if (sec == -1) {
+      clearInterval(timer);
+      alert("Time is up!");
+      incrementWrongAnswer();
+      nextButton.disabled = false;
+     
+      Array.from(answerButtonsElement.children).forEach(function (button) {
+        setStatusClass(button, button.dataset.correct);
+      
+      }); 
+
+    }
+
+  },1000);
+  } 
+
+// Stop Timer
+function stopTimer() {
+  clearInterval(timer);
 }
 
 
