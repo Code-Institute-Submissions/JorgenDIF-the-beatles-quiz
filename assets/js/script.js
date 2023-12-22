@@ -364,6 +364,7 @@ function handleTimeUp() {
   incrementWrongAnswer();
   showCorrectAnswer(); // Assuming you want to reveal the correct answer
   nextButton.disabled = false;
+  
 }
 
 // Show Correct and Wrong Answer

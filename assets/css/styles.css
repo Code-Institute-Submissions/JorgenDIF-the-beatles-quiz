@@ -169,6 +169,8 @@ body {
 
 .btn {
   font-size: 1rem;
+  height: auto;
+  width: auto;
   color: black;
   padding: 5px 10px;
   border: 2px solid #000;
@@ -244,7 +246,9 @@ body {
 .start-btn,
 .dropdown-btn,
 .hide-btn,
-.next-btn {
+.next-btn,
+.hs-btn{
+  width:220px;
   font-size: 1.5rem;
   font-weight: bold;
 }
@@ -269,6 +273,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  width : 220px;
   gap: 10px;
   padding: 10px;
   margin: 10px 0;
