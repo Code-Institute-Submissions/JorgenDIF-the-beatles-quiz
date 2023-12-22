@@ -235,7 +235,13 @@ function setNextQuestion() {
   resetState();
   nextButton.disabled = true;
   document.getElementById("question-number").innerText = currentQuestionNumber;
-  showQuestion(shuffleQuestions[currentQuestionIndex]);
+  
+  let currentQuestion = shuffleQuestions[currentQuestionIndex];
+  let shuffledAnswers = shuffleArray(currentQuestion.answers);
+  currentQuestion.answers = shuffledAnswers;
+  
+  showQuestion(currentQuestion);
+  
   currentQuestionIndex++;
   if (shuffleQuestions.length > currentQuestionIndex) {
     nextButton.classList.remove("hide");
@@ -243,6 +249,16 @@ function setNextQuestion() {
     startButton.innerText = "Restart";
     startButton.classList.remove("hide");
   }
+}
+
+// Shuffle the answers
+function shuffleArray(array) {
+  let shuffledArray = array.slice();
+  for (let i = shuffledArray.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+  }
+  return shuffledArray;
 }
 
 // Show the question and answers
