@@ -10,6 +10,9 @@ let currentQuestionNumber = 1;
 let score = 0;
 let incorrect = 0;
 let answeredQuestions = [];
+let sec = 10;
+let time;
+
 
 // The questions
 const questions = [
@@ -186,7 +189,7 @@ function startGame(difficulty) {
   currentQuestionIndex = 0;
   currentQuestionNumber = 1;
   setNextQuestion();
-  
+  startTimer();
   
 
   // Hide the dropdown
@@ -331,3 +334,19 @@ function incrementWrongAnswer() {
 
   console.log("Incorrect:", incorrect);
 }
+
+// Timer
+
+function startTimer() {
+  time = setInterval(() => {
+ document.getElementById("timer").innerHTML = sec ;
+  sec--;
+  if (sec == -1) {
+    clearInterval(time);
+    alert("Time is up!");
+   
+  }
+},1000);
+}
+
+
