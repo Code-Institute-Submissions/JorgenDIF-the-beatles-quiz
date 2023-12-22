@@ -186,7 +186,7 @@ function startGame(difficulty) {
   currentQuestionIndex = 0;
   currentQuestionNumber = 1;
   setNextQuestion();
-  hideRules();
+  
   
 
   // Hide the dropdown
