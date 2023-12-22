@@ -276,7 +276,7 @@ function selectAnswer(answer) {
 
   if (answeredQuestions.includes(currentQuestionIndex)) {
     // User already answered this question
-    console.log("User already answered this question");
+console.log("User already answered this question");
     return;
   }
 
@@ -332,15 +332,17 @@ let incorrectElement = document.getElementById("incorrect");
 function incrementScore() {
   score++;
   scoreElement.innerText = score;
-
   console.log("Score:", score);
 }
 
 function incrementWrongAnswer() {
   incorrect++;
   incorrectElement.innerText = incorrect;
+  
 
   console.log("Incorrect:", incorrect);
+  console.log("Score:", score);
+  console.log("answerButtonsElement:", answerButtonsElement);
 }
 
 // Start Timer
@@ -361,20 +363,27 @@ function startTimer() {
 // Handle Time Up
 function handleTimeUp() {
   alert("Time is up!");
-  incrementWrongAnswer();
-  showCorrectAnswer(); // Assuming you want to reveal the correct answer
+showCorrectAnswer(); // Assuming you want to reveal the correct answer
   nextButton.disabled = false;
+  answeredQuestions.push(currentQuestionIndex);
+  incrementWrongAnswer();
   
+  
+ 
 }
 
 // Show Correct and Wrong Answer
 function showCorrectAnswer() {
+  
   const answers = shuffleQuestions[currentQuestionIndex].answers;
 
   answers.forEach((answer, index) => {
     const answerButton = answerButtonsElement.children[index];
     setStatusClass(answerButton, answer.correct);
   });
+  console.log(showCorrectAnswer)
+  
+  
 }
 
 // Stop Timer
