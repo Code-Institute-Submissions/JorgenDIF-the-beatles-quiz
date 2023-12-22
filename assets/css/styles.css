@@ -204,7 +204,8 @@ body {
 .start-btn,
 .restart-btn,
 .next-btn,
-.hide-btn {
+.hide-btn,
+.hs-btn:hover          {
   padding: 5px 10px;
   border: 2px solid #000;
   border-radius: 5px;
@@ -217,7 +218,9 @@ body {
 .start-btn:hover,
 .restart-btn:hover,
 .next-btn:hover,
-.hide-btn:hover {
+.hide-btn:hover,
+.hs-btn:hover
+{
   background-color: #000;
   color: #fff;
 }
