@@ -12,6 +12,7 @@ let incorrect = 0;
 let answeredQuestions = [];
 let sec = 10;
 let time;
+let currentQuestion;
 
 
 // The questions
@@ -234,9 +235,9 @@ function setNextQuestion() {
   startTimer();
   resetState();
   nextButton.disabled = true;
+  currentQuestion = shuffleQuestions[currentQuestionIndex]; // Update global currentQuestion variable
   document.getElementById("question-number").innerText = currentQuestionNumber;
   
-  let currentQuestion = shuffleQuestions[currentQuestionIndex];
   let shuffledAnswers = shuffleArray(currentQuestion.answers);
   currentQuestion.answers = shuffledAnswers;
   
@@ -346,7 +347,16 @@ let scoreElement = document.getElementById("score");
 let incorrectElement = document.getElementById("incorrect");
 
 function incrementScore() {
-  score++;
+  if (currentQuestion.difficulty === "Easy") {
+  score++; }
+  else if(currentQuestion.difficulty === "Medium") {
+    score += 2;
+  }
+  else if (currentQuestion.difficulty === "Hard") {
+    score += 3;
+  }
+
+
   scoreElement.innerText = score;
   console.log("Score:", score);
 }
