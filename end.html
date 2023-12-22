@@ -13,11 +13,13 @@
 <body>
     <div id="end-container">
         <h1 id="final-score">0</h1>
-        <form>
-            <input type="text" name="username" id="username" placeholder="Enter your name" />
-            <button type="submit" id="saveScoresBtn" class="btn" onclick="saveHighScore(event)">Save</button>
+        <form autocomplete="off"></form>
+        <input type="text" name="username" id="username" placeholder="Enter your name" autocomplete="off" />
+        <button type="submit" id="saveScoresBtn" class="btn" onclick="saveHighScore(event)" disabled>Save</button>
         </form>
         <a class="btn" id="home-btn" href="index.html">Home</a>
     </div>
+    <script src="assets/js/end.js"></script>
 </body>
+
 </html>

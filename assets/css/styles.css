@@ -222,6 +222,13 @@ body {
   color: #fff;
 }
 
+.btn[disabled]:hover {
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+
 #controls {
   display: flex;
   justify-content: center;
