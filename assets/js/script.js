@@ -191,6 +191,7 @@ function startGame(difficulty) {
   setNextQuestion();
   startTimer();
   
+  
 
   // Hide the dropdown
   document.getElementById("diffDropdown").classList.remove("show");
@@ -227,6 +228,10 @@ function hideRules() {
 
 // set next question
 function setNextQuestion() {
+  if(timer) {
+    clearInterval(timer);
+  }
+  startTimer();
   resetState();
   nextButton.disabled = true;
   document.getElementById("question-number").innerText = currentQuestionNumber;
@@ -338,11 +343,13 @@ function incrementWrongAnswer() {
 // Timer
 
 function startTimer() {
-  time = setInterval(() => {
+  clearInterval(timer);
+  sec = 10;
+  timer = setInterval(() => {
  document.getElementById("timer").innerHTML = sec ;
   sec--;
   if (sec == -1) {
-    clearInterval(time);
+    clearInterval(timer);
     alert("Time is up!");
    
   }
