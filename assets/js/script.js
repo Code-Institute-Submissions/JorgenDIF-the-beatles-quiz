@@ -348,23 +348,33 @@ function startTimer() {
   clearInterval(timer);
   sec = 10;
   timer = setInterval(() => {
- document.getElementById("timer").innerHTML = sec ;
-  sec--;
-    if (sec == -1) {
+    document.getElementById("timer").innerHTML = sec;
+    sec--;
+
+    if (sec < 0) {
       clearInterval(timer);
-      alert("Time is up!");
-      incrementWrongAnswer();
-      nextButton.disabled = false;
-     
-      Array.from(answerButtonsElement.children).forEach(function (button) {
-        setStatusClass(button, button.dataset.correct);
-      
-      }); 
-
+      handleTimeUp();
     }
+  }, 1000);
+}
 
-  },1000);
-  } 
+// Handle Time Up
+function handleTimeUp() {
+  alert("Time is up!");
+  incrementWrongAnswer();
+  showCorrectAnswer(); // Assuming you want to reveal the correct answer
+  nextButton.disabled = false;
+}
+
+// Show Correct and Wrong Answer
+function showCorrectAnswer() {
+  const answers = shuffleQuestions[currentQuestionIndex].answers;
+
+  answers.forEach((answer, index) => {
+    const answerButton = answerButtonsElement.children[index];
+    setStatusClass(answerButton, answer.correct);
+  });
+}
 
 // Stop Timer
 function stopTimer() {
