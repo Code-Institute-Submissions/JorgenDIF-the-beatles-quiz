@@ -314,6 +314,7 @@ console.log("User already answered this question");
 
   // Check if all questions have been answered
   if (answeredQuestions.length === shuffleQuestions.length) {
+    console.log("Storing score: " + score);
     localStorage.setItem("mostRecentScore", score);
     //go to the end page
     return window.location.assign("end.html");
