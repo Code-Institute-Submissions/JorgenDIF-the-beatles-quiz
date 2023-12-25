@@ -52,22 +52,53 @@ Remember the harder the difficulty the more points you get!🎸
 
 <a id=responsive>
 
+### Am I Responsive?
+
 ![Alt text](assets/images/ami-responsive-beatles.png)
 
 <a id=ux>
 
+## UX
+
 <a id=the-strategy>
 
+### The Strategy
+
+  * My strategy centered around crafting an engaging and enjoyable Beatles quiz that would appeal to a broad audience.
+   * I aimed to go beyond the conventional question formats by incorporating music-related queries using Spotify. 
+   * While initially considering the ambitious idea of recording Beatles songs in different styles, I acknowledged the current limitations of my JavaScript proficiency.
 
 
 <a id=the-scope>
+
+### The Scope
+
+* Envisioning a unique Beatles quiz experience, I strived to offer more than just a standard set of questions. 
+* The incorporation of music questions, especially with Spotify integration, was a key aspect of my strategy. 
+
+* Although the aspiration to reimagine Beatles songs in various styles required advanced JavaScript skills, it remains a future prospect.
 
 
 
 <a id=the-structure>
 
+### Th Structure
+
+* To ensure the quiz's distinctiveness, I opted for three difficulty levels, each featuring diverse question types. 
+* The inclusion of a scoring system for each level aimed to provide users with a comprehensive assessment of their performance.
+
 
 <a id=the-skeleton>
+
+### The Skeleton
+
+* For meticulous planning and visualization, I utilized Balsamiq to create wireframes. 
+* These wireframes served as a strategic guide, offering a clear blueprint for the quiz layout and design.
+
+* [Wireframes Iphone](/documents/wireframes/ipad/)
+* [Wireframes Ipad](/documents/wireframes/ipad/)
+* [Wireframes Laptop](/documents/wireframes/laptop/)
+
 
 
 <a id=the-surface>
