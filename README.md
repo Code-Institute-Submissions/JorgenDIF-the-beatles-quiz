@@ -9,11 +9,22 @@ Medium: Identify the album a Beatles song belongs to. Pick the correct album fro
 
 Hard: Dive into challenging Beatles facts and trivia. Select the right answer from four options.
 
-Press "Start Quiz," choose your difficulty, and get ready! Your goal is to answer as many questions as you can correctly. Good luck, and may your Beatles knowledge shine! 🎸
+Press "Start Quiz," choose your difficulty, and get ready! Your goal is to answer as many questions as you can correctly. Good luck, and may your Beatles knowledge shine! 
+Dont forget to save your highscore at the end!
+
+Remember the harder the difficulty the more points you get!🎸
+
+[Link to the website](https://jorgendif.github.io/the-beatles-quiz/index.html)
 
 # Content
 **Table of content:**
 * [Introduction](#introduction)
+* [UX](#ux)
+   * [The Strategy](#the-strategy)
+   * [The Scope](#the-scope)
+   * [The Structure](#the-structure)
+   * [The Skeleton](#the-skeleton)
+   * [The Surface](#the-surface)
 *   [User Experience](#user-experience) 
     * [First Time User](#first-time-user)
     * [Returning User](#returning-user)
@@ -35,6 +46,9 @@ Press "Start Quiz," choose your difficulty, and get ready! Your goal is to answe
      * [Content](#credit-content)
      * [Images](#images)
      * [Thank You](#thank-you)
+
+
+     
      
 
      
