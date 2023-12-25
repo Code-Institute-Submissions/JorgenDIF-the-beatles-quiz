@@ -19,6 +19,7 @@ Remember the harder the difficulty the more points you get!🎸
 # Content
 **Table of content:**
 * [Introduction](#introduction)
+   * [Am I Responsive](#responsive)
 * [UX](#ux)
    * [The Strategy](#the-strategy)
    * [The Scope](#the-scope)
@@ -48,7 +49,38 @@ Remember the harder the difficulty the more points you get!🎸
      * [Thank You](#thank-you)
 
 
-     
-     
 
+<a id=responsive>
+
+![Alt text](assets/images/ami-responsive-beatles.png)
+
+<a id=ux>
+
+<a id=the-strategy>
+
+
+
+<a id=the-scope>
+
+
+
+<a id=the-structure>
+
+
+<a id=the-skeleton>
+
+
+<a id=the-surface>
+
+
+<a id=ux>
+
+
+<a id=first-time-user>
+
+
+<a id=returning-user>
+
+
+<a id=frequent-user>
      
