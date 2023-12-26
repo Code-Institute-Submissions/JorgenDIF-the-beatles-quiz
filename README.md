@@ -13,6 +13,8 @@ Hard: Dive into challenging Beatles facts and trivia. Select the right answer fr
 Press "Start Quiz," choose your difficulty, and get ready! Your goal is to answer as many questions as you can correctly. Good luck, and may your Beatles knowledge shine!
 Dont forget to save your highscore at the end!
 
+You got 10 seconds to answer each question!
+
 Remember the harder the difficulty the more points you get!🎸
 
 [Link to the website](https://jorgendif.github.io/the-beatles-quiz/index.html)
@@ -153,6 +155,8 @@ Remember the harder the difficulty the more points you get!🎸
 * Initiating the game automatically conceals the rules while transforming the start button into a restart button. 
 * Additionally, users have the option to manually hide the rules.
 
+* The background image across all pages is the cover of The Beatles album "Revolver." It provides a consistent visual theme throughout the entire quiz.
+
 ![main-page1](assets/images/mainpage-beatles1.png)
 
 <a id="maine-page2">
@@ -181,6 +185,7 @@ Remember the harder the difficulty the more points you get!🎸
 
 ### The Question
 * This is the question layout. Four options are presented, the timer is displayed in the top left corner, and the question number is indicated above.
+* The quiz questions, as well as the answer options, are randomized, ensuring a varied and dynamic experience for users. This adds an element of unpredictability to each round of the quiz.
 
 ![the-question](assets/images/question-beatles.png)
 
@@ -195,12 +200,21 @@ This is the appearance when a question is answered. The color red is used for in
 <a id="the-end-page">
 
 ### The End Page
+
+After completing the quiz, you'll land on the end page. Here, you have two options: sign your name to check if you've made it to the high score list or simply return home
+
 ![the-end-page](assets/images/end-page.png)
 
 
-this
+
+
 <a id="the-highscore">
 
+
+
 ### The High Score Page
+
+This is the High Score Page! Find out if you've made it to the top 5 and see your name shine. If not, feel free to return home and give it another go!
+
 ![The-highscore-page](assets/images/highscore-page.png)
 

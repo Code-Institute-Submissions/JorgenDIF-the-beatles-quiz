@@ -37,7 +37,7 @@ let score = 0;
 let incorrect = 0;
 let answeredQuestions = [];
 let sec = 10;
-let time;
+let timer;
 let currentQuestion;
 
 // The questions
@@ -193,11 +193,6 @@ const questions = [
     ],
   },
 ];
-
-//  Open the dropdown menu
-function openDropdown() {
-  document.getElementById("diffDropdown").classList.toggle("show");
-}
 
 /**
  * Starts a new round of the quiz game with the specified difficulty.
