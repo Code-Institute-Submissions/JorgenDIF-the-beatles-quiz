@@ -259,6 +259,11 @@ This is the High Score Page! Find out if you've made it to the top 5 and see you
 | Medium Button    | Start game on medium mode  |  Click "Medium" button  | Game started with medium difficulty  |
 | Hard Button    | Start game on hard mode  |  Click "Hard" button  | Game started with hard difficulty  |
 | Show Highscore Button  | Show Highscore  |  Click "Show Highscore  |  Redirected to highscore page  |
+| Question 1-5 easy mode wrong answers | Wrong Answer should be red and increase incorrect answers . Also the other options should have correct colors.| Click on wrong answer option | The option turns red, and the incorrect answers increase. Every button gets the right color. Incorrect turns red and the correct green |
+
+| Question 1-5 easy mode correct answers | Correct Answer should be green and increase score if answered in less than 10 seconds. The other options should be red | Click on correct answer option | The option turns green, and the score increases (if timely). The incorrect turns red |
+
+
 
 
 
