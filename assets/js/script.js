@@ -248,14 +248,20 @@ document.addEventListener("click", function (e) {
 });
 
 // Hide or show the rules
-function hideRules() {
-  let rules = document.getElementById("rules-container");
-  if (rules.style.display === "none") {
-    rules.style.display = "block";
+const rulesContainer = document.getElementById("rules-container");
+document.getElementById("hide-rules").addEventListener("click", function () {
+  if (rulesContainer.style.display === "none") {
+    rulesContainer.style.display = "block";
   } else {
-    rules.style.display = "none";
+    rulesContainer.style.display = "none";
   }
-}
+});
+
+
+
+
+  
+ 
 
 /**
  * Sets up and displays the next question in the quiz.
