@@ -25,13 +25,14 @@
  */
 
 // The varibles
-const startButton = document.getElementById("start-btn");
 const nextButton = document.getElementById("next-btn");
 const questionContainerElement = document.getElementById("question-container");
 let shuffleQuestions, currentQuestionIndex;
 const questionElement = document.getElementById("question");
 const answerButtonsElement = document.getElementById("answer-buttons");
 const gameContainer = document.getElementById("game-container");
+let startBtn = document.getElementById("startBtn");
+let diffDropdown = document.getElementById("diffDropdown");
 let currentQuestionNumber = 1;
 let score = 0;
 let incorrect = 0;
@@ -194,15 +195,30 @@ const questions = [
   },
 ];
 
-//  Open the dropdown menu
-document.getElementById("startBtn").addEventListener("click", function (e) {
-  document.getElementById("diffDropdown").classList.toggle("show");
-  if (e.target !== document.getElementById("startBtn")) {
+// Open the dropdown menu when the start button is clicked
+startBtn.addEventListener("click", function (e) {
+  diffDropdown.classList.toggle("show");
+  e.stopPropagation(); // Prevent this click from triggering the document's click event listener
+});
+
+// Hide the dropdown menu when anything else is clicked
+document.addEventListener("click", function (e) {
+  if (e.target !== startBtn && e.target !== diffDropdown) {
     diffDropdown.classList.remove("show");
   }
-  
-  console.log("clicked");
-} );
+});
+
+document.getElementById("easy-btn").addEventListener("click", function () {
+  startGame("Easy");
+});
+console.log("easy-btn");
+  document.getElementById("medium-btn").addEventListener("click", function () {
+    startGame("Medium");
+  });
+    document.getElementById("hard-btn").addEventListener("click", function () {
+      startGame("Hard");
+    });
+
   
 /**
  * Starts a new round of the quiz game with the specified difficulty.
@@ -211,7 +227,7 @@ document.getElementById("startBtn").addEventListener("click", function (e) {
  */
 function startGame(difficulty) {
   resetGame();
-  startButton.innerText = "Restart";
+  startBtn.innerText = "Restart";
   nextButton.disabled = true;
   gameContainer.classList.remove("hide");
   document.getElementById("rules-container").style.display = "none";
