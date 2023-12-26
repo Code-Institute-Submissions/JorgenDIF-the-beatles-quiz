@@ -194,6 +194,11 @@ const questions = [
   },
 ];
 
+//  Open the dropdown menu
+function openDropdown() {
+  document.getElementById("diffDropdown").classList.toggle("show");
+}
+
 /**
  * Starts a new round of the quiz game with the specified difficulty.
  * Resets the game state, hides the rules container, shuffles and selects
