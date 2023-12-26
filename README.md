@@ -218,3 +218,32 @@ This is the High Score Page! Find out if you've made it to the top 5 and see you
 
 ![The-highscore-page](assets/images/highscore-page.png)
 
+
+<a id="technologies">
+
+
+#  Technologies
+
+<a id="languages">
+
+
+### Languages
+
+* HTML
+* CSS
+* JavaScript
+
+<a id="tools">
+
+### Tools
+
+* Balsamiq: Used for creating wireframes.
+* VSCode: Utilized for writing and editing HTML, CSS, and JavaScript.
+* GitHub: Employed for code deployment.
+* JSHint: Applied for validating JavaScript code and identifying unused functions.
+* CSS Validator: Utilized for validating CSS code.
+* HTML Validator: Used for validating HTML code.
+* Am I Responsive: Employed for testing and ensuring responsiveness.
+
+
+
