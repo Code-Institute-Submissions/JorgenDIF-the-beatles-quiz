@@ -245,5 +245,21 @@ This is the High Score Page! Find out if you've made it to the top 5 and see you
 * HTML Validator: Used for validating HTML code.
 * Am I Responsive: Employed for testing and ensuring responsiveness.
 
+<a id="testing">
+
+#  Testing
+
+
+### Manual Testing
+| Feature              | Description                 | Steps                             | Outcome                      |
+| --- | --- | ---| --- |
+| Hide/Show The Rules  Button | Hide or show the rules      | Click "Hide/Show Rules" button   | Rules are hidden or displayed |
+| Start Button   |  Open the start menu   |   Click "Start" button  |  Start menu opened |
+| Easy Button    | Start game on easy mode  |  Click "Easy" button  | Game started with easy difficulty  |
+| Medium Button    | Start game on medium mode  |  Click "Medium" button  | Game started with medium difficulty  |
+| Hard Button    | Start game on hard mode  |  Click "Hard" button  | Game started with hard difficulty  |
+| Show Highscore Button  | Show Highscore  |  Click "Show Highscore  |  Redirected to highscore page  |
+
+
 
 
