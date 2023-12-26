@@ -207,6 +207,7 @@ document.addEventListener("click", function (e) {
   }
 });
 
+// Start the game with the selected difficulty
 document.getElementById("easy-btn").addEventListener("click", function () {
   startGame("Easy");
 });

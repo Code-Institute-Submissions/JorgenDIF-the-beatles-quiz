@@ -251,6 +251,7 @@ This is the High Score Page! Find out if you've made it to the top 5 and see you
 
 
 ### Manual Testing
+
 | Feature              | Description                 | Steps                             | Outcome                      |
 | --- | --- | ---| --- |
 | Hide/Show The Rules  Button | Hide or show the rules      | Click "Hide/Show Rules" button   | Rules are hidden or displayed |
@@ -258,11 +259,59 @@ This is the High Score Page! Find out if you've made it to the top 5 and see you
 | Easy Button    | Start game on easy mode  |  Click "Easy" button  | Game started with easy difficulty  |
 | Medium Button    | Start game on medium mode  |  Click "Medium" button  | Game started with medium difficulty  |
 | Hard Button    | Start game on hard mode  |  Click "Hard" button  | Game started with hard difficulty  |
-| Show Highscore Button  | Show Highscore  |  Click "Show Highscore  |  Redirected to highscore page  |
+| Show Highscore Button  | Show Highscore  |  Click "Show Highscore"  |  Redirected to highscore page  |
 | Question 1-5 easy mode wrong answers | Wrong Answer should be red and increase incorrect answers . Also the other options should have correct colors.| Click on wrong answer option | The option turns red, and the incorrect answers increase. Every button gets the right color. Incorrect turns red and the correct green |
-
 | Question 1-5 easy mode correct answers | Correct Answer should be green and increase score if answered in less than 10 seconds. The other options should be red | Click on correct answer option | The option turns green, and the score increases (if timely). The incorrect turns red |
+| Question 1-5 medium mode wrong answers | Wrong Answer should be red and increase incorrect answers. Also, the other options should have correct colors. | Click on wrong answer option | The option turns red, and the incorrect answers increase. Every button gets the right color. Incorrect turns red, and the correct turns green |
+| Question 1-5 medium mode correct answers | Correct Answer should be green and increase score if answered in less than 10 seconds. The other options should be red | Click on correct answer option | The option turns green, and the score increases (if timely). The incorrect turns red |
+| Question 1-5 hard mode wrong answers | Wrong Answer should be red and increase incorrect answers. Also, the other options should have correct colors. | Click on wrong answer option | The option turns red, and the incorrect answers increase. Every button gets the right color. Incorrect turns red, and the correct turns green |
+| Question 1-5 hard mode correct answers | Correct Answer should be green and increase score if answered in less than 10 seconds. The other options should be red | Click on correct answer option | The option turns green, and the score increases (if timely). The incorrect turns red |
+| Next Question Button | Should display the next question if an answer choice is made; otherwise, it should be unclickable | Click next button before answering the question | The button is unclickable and does not work until an answer choice is made |
+| Next Question Button | Should display the next question if an answer choice is made; otherwise, it should be unclickable | Click next button after answering the question | The next question is shown |
+| Timer Reaches 0 | Should show the correct/incorrect answer. Display an alert with "Time is up" and increase the incorrect answers count | Wait for the timer to reach 0 | An alert appears with "Time is up," and the count of incorrect answers increases
+| All Questions Answered | Should navigate to the end.html page where you can sign your name | Answer all the questions | Redirected to end.html |
+| Sign with Name to Determine High Score | You must sign your name to save the score | Attempt to save without signing; Saved after signing with a name | Redirected to the Highscore page |
+| Highscore Page | Should display the top 5 scores | Redirected to Highscore page | Observed the top 5 scores |
+| Home Button on Highscore Page | Should navigate back to the home page | Clicked "Home" button | Redirected back to the home page |
 
+
+<a id="lighthouse>
+
+### Lighthouse
+
+*  Performed a lighthouse test in Devtools on all three pages with this outcome
+
+![Main lighthouse Test](assets/images/lighthousemain-beatles.png)
+
+
+![Sign-In Lighthouse Test](assets/images/lighthouse-signin-beatles.png)
+
+![Highscore Lighthouse Test](assets/images/lighthouse-highscore-beatles.png)
+
+<a id=browser-test></a>
+
+### Browser Test
+
+* I tested my Website with : Safari, Google Chrome and Microsoft Edge. No errors occured on any device
+
+
+<a id= "Vaildation">
+
+### Validation
+
+
+
+<a id ="bugs">
+
+### Bugs
+
+| Bug | Status | Description | Steps To Resolve |
+| --- | --- | --- | --- |
+| Answers Not Displaying |  ~~Resolved~~  | Answers weren't showing up; Spelled "questions" instead of "question" | Correct spelling to "question" |
+| Unable to Choose Questions After Restart |  ~~Resolved~~  | Questions couldn’t be chosen after restart; Added `answeredQuestions = [];` at the end of reset game function| Added `answeredQuestions = [];` at the end of reset game function |
+| End.html Navigation Issue |  ~~Resolved~~ | Couldn't navigate to end.html; Removed the "/" before end.html | Removed the "/" before end.html |
+| High Score Reset Issue |  ~~Resolved~~  | High score reset to 0; Implemented a control check for an empty string when using JSON | Implemented a control check for an empty string with help from [Stackoverflow](https://stackoverflow.com/questions/51118396/uncaught-syntaxerror-unexpected-end-of-json-input-at-json-parse-anonymous ) |
+| Start Menu Not Closing |  ~~Resolved~~ | Start menu wasn't closing when clicking outside; Added code to close menu when clicking outside | Added event listener and code to close the menu got help from [Stackoverflow](https://stackoverflow.com/questions/63028291/how-to-close-a-menu-bar-when-clicking-outside-of-it) |
 
 
 
