@@ -299,7 +299,24 @@ This is the High Score Page! Find out if you've made it to the top 5 and see you
 
 ### Validation
 
+* I did HTML validations with [W3C HTML-Validator](https://validator.w3.org/#validate_by_input) with no errors or warnings on any of the 3 pages 
+![Main HTML validation](assets/images/html-main-beatles.png)
 
+![End HTML validation](assets/images/html-end-beatles.png)
+
+![Highscore HTML validation](assets/images/html-highscore-beatles.png)
+
+* I did a CSS validation with [W3C CSS-Validator](https://jigsaw.w3.org/css-validator/) with no errors or warnings shown
+
+![CSS validation](assets/images/css-validate-beatles.png)
+
+* I checked my JS files with [JsHint](https://jshint.com/) with no errors or warnings on any of my 3 JS files
+
+![Jshint Main](assets/images/jshint-main.png)
+
+![JS Hint End](assets/images/jshint-end.png)
+
+![JS Hint Highscore](assets/images/jshint-highscore.png)
 
 <a id ="bugs">
 
@@ -312,8 +329,27 @@ This is the High Score Page! Find out if you've made it to the top 5 and see you
 | End.html Navigation Issue |  ~~Resolved~~ | Couldn't navigate to end.html; Removed the "/" before end.html | Removed the "/" before end.html |
 | High Score Reset Issue |  ~~Resolved~~  | High score reset to 0; Implemented a control check for an empty string when using JSON | Implemented a control check for an empty string with help from [Stackoverflow](https://stackoverflow.com/questions/51118396/uncaught-syntaxerror-unexpected-end-of-json-input-at-json-parse-anonymous ) |
 | Start Menu Not Closing |  ~~Resolved~~ | Start menu wasn't closing when clicking outside; Added code to close menu when clicking outside | Added event listener and code to close the menu got help from [Stackoverflow](https://stackoverflow.com/questions/63028291/how-to-close-a-menu-bar-when-clicking-outside-of-it) |
+| Low Lighthouse accessibility score| ~~Resolved~~ | Accessibility score was 82 in Lighthouse test.       | Added a title to the Spotify Playlist.   |
 
 
+<a id="deployment">
+
+# Depolyment
+
+<a id="deployment-to-github" a>
+
+### Deployment To Github
+  
+
+* Once code has been completed, it is pushed to Github for deployment using the pages feature. The site is now accessible via: [Beatles Quiz](https://jorgendif.github.io/the-beatles-quiz/)
+
+Steps needed to deploy
+
+* Navigate to the repository on github and click settings.
+* Then select pages on the side navigation.
+* Select the none dropdown, and then click main.
+* Click on the save button.
+* If any changes are required, they can be done, commited and pushed to GitHub and the changes  will be updated.
 
 
 
