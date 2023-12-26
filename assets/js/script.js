@@ -26,7 +26,6 @@
 
 // The varibles
 const nextButton = document.getElementById("next-btn");
-const questionContainerElement = document.getElementById("question-container");
 let shuffleQuestions, currentQuestionIndex;
 const questionElement = document.getElementById("question");
 const answerButtonsElement = document.getElementById("answer-buttons");
@@ -289,8 +288,8 @@ function setNextQuestion() {
   if (shuffleQuestions.length > currentQuestionIndex) {
     nextButton.classList.remove("hide");
   } else {
-    startButton.innerText = "Restart";
-    startButton.classList.remove("hide");
+    startBtn.innerText = "Restart";
+    startBtn.classList.remove("hide");
   }
 }
 
