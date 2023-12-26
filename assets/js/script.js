@@ -195,10 +195,15 @@ const questions = [
 ];
 
 //  Open the dropdown menu
-function openDropdown() {
+document.getElementById("startBtn").addEventListener("click", function (e) {
   document.getElementById("diffDropdown").classList.toggle("show");
-}
-
+  if (e.target !== document.getElementById("startBtn")) {
+    diffDropdown.classList.remove("show");
+  }
+  
+  console.log("clicked");
+} );
+  
 /**
  * Starts a new round of the quiz game with the specified difficulty.
  * Resets the game state, hides the rules container, shuffles and selects
@@ -233,19 +238,8 @@ function resetGame() {
   answeredQuestions = [];
 }
 
-/**
- * Listens for a click event outside the start button and difficulty dropdown.
- * Closes the difficulty dropdown if the click is outside these elements.
- */
-document.addEventListener("click", function (e) {
-  const diffDropdown = document.getElementById("diffDropdown");
-  const startBtn = document.getElementById("start-btn");
 
-  // Check if the clicked element is not the start button or the dropdown
-  if (!startBtn.contains(e.target) && !diffDropdown.contains(e.target)) {
-    diffDropdown.classList.remove("show");
-  }
-});
+ 
 
 // Hide or show the rules
 const rulesContainer = document.getElementById("rules-container");
@@ -256,12 +250,6 @@ document.getElementById("hide-rules").addEventListener("click", function () {
     rulesContainer.style.display = "none";
   }
 });
-
-
-
-
-  
- 
 
 /**
  * Sets up and displays the next question in the quiz.
