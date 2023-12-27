@@ -139,14 +139,14 @@ Remember the harder the difficulty the more points you get!🎸
 
 ### Frequent User
 
-- Variety in Questions: Frequent users should encounter a diverse set of questions to maintain interest and prevent boredom.
+- Variety in Questions: Frequent users should encounter a more diverse set of questions to maintain interest and prevent boredom.
 - Expansion of Game Modes: The quiz should evolve to introduce new game modes or features to keep frequent users engaged.
 - Diversification to Other Artists: As a long-term user, there might be an interest in expanding the quiz to include questions about other artists or providing links to quizzes about similar bands.
 - These user experience goals ensure that the quiz caters to the needs and preferences of different types of users, offering a well-rounded and engaging experience for all.
 
 <a id="feauters">
 
-#  Feauters
+#  Features
     
   <a id="maine-page1">
 
