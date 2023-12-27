@@ -155,6 +155,8 @@ Remember the harder the difficulty the more points you get!🎸
 * I've embraced a minimalist design using a black and white color palette.
 ![Color Palette](assets/images/color-palette1.png)
 
+* For correct and incorrect I use green and red
+
 * The font-family is set to Arial, Helvetica, sans-serif, ensuring simplicity in typography.
 
 * The deliberate use of opacity in the background images adds a touch of sophistication, maintaining an overall sense of simplicity and cleanliness.

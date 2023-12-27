@@ -5,6 +5,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Music quiz for everybody. The Beatles quiz made for a nice and easy time. A game to play again and again">
+    <meta name="keywords" content="The Beatles, Quiz, Music, Game, Fun, Trivia, Lyrics, Albums, Facts">
     <title>The Beatles Quiz</title>
     <!--Stylesheet and favicon-->
     <link href="assets/favicon/favicon.ico" rel="icon" type="image/x-icon">
@@ -46,55 +49,56 @@
     <div id="rules-btn-container"> <button id="hide-rules" class="hide-btn btn">Hide/Show
             Rules</button></div>
     <div id="dropdown-difficulty">
-        <nav id="start-rules-btn-container">  <button id="startBtn" class="start-btn btn">Start
+        <nav id="start-rules-btn-container"> <button id="startBtn" class="start-btn btn">Start
                 Quiz</button>
             <div id="diffDropdown" class="dropdown-btn">
                 <ul>
-                   <li> <a href="#" id="easy-btn" class="btn">Easy</a> </li>
-                   <li> <a href="#" id="medium-btn" class="btn">Medium</a></li>
-                   <li> <a href="#" id="hard-btn" class="btn">Hard</a></li>
+                    <li> <a href="#" id="easy-btn" class="btn">Easy</a> </li>
+                    <li> <a href="#" id="medium-btn" class="btn">Medium</a></li>
+                    <li> <a href="#" id="hard-btn" class="btn">Hard</a></li>
                 </ul>
 
-            </div> </nav>
-        </div>
-
-        <div id="game-container" class="hide">
-            <div id="timer">10</div>
-            <div id="question-container">
-                <div id="question-number">1</div>
-                <div id="question">Question</div>
-                <div id="answer-buttons" class="button-grid">
-                    <button class="btn">Answer 1</button>
-                    <button class="btn">Answer 2</button>
-                    <button class="btn">Answer 3</button>
-                    <button class="btn">Answer 4</button>
-                </div>
             </div>
-            <!--The controls-->
-            <div id="controls">
-                <button onclick="setNextQuestion()" id="next-btn" class="next-btn btn">Next Question</button>
+        </nav>
+    </div>
+
+    <div id="game-container" class="hide">
+        <div id="timer">10</div>
+        <div id="question-container">
+            <div id="question-number">1</div>
+            <div id="question">Question</div>
+            <div id="answer-buttons" class="button-grid">
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>
             </div>
         </div>
-
-        <div id="hs-container">
-            <a class="hs-btn btn" href="highscores.html">Show Highscore</a>
+        <!--The controls-->
+        <div id="controls">
+            <button onclick="setNextQuestion()" id="next-btn" class="next-btn btn">Next Question</button>
         </div>
+    </div>
 
-        <div id="score-container">
-            <p class="scores"> Score: <span id="score">0</span></p>
-            <p class="scores">Incorrect: <span id="incorrect">0</span></p>
+    <div id="hs-container">
+        <a class="hs-btn btn" href="highscores.html">Show Highscore</a>
+    </div>
+
+    <div id="score-container">
+        <p class="scores"> Score: <span id="score">0</span></p>
+        <p class="scores">Incorrect: <span id="incorrect">0</span></p>
+    </div>
+
+    <!--The footer-->
+    <footer id="foot" class="try">
+        <div id="music-container">
+            <iframe style="border-radius:12px" title="beatles-playslist"
+                src="https://open.spotify.com/embed/playlist/5sKaDNLUSiDX0MQlhZBvrV?utm_source=generator"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"></iframe>
         </div>
-
-        <!--The footer-->
-        <footer id="foot" class="try">
-            <div id="music-container">
-                <iframe style="border-radius:12px" title="beatles-playslist"
-                    src="https://open.spotify.com/embed/playlist/5sKaDNLUSiDX0MQlhZBvrV?utm_source=generator"
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                    loading="lazy"></iframe>
-            </div>
-        </footer>
-        <script src="assets/js/script.js"> </script>
+    </footer>
+    <script src="assets/js/script.js"> </script>
 </body>
 
 </html>
