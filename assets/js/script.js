@@ -359,7 +359,7 @@ function selectAnswer(answer) {
 // Check if all questions have been answered
   if (answeredQuestions.length === shuffleQuestions.length) {
     localStorage.setItem("mostRecentScore", score);
-    alert("Absolutely Fab!Your score is " + score + "!")
+    alert("Absolutely Fab! Your score is " + score + "!")
     //go to the end page
     return window.location.assign("end.html");
   }
