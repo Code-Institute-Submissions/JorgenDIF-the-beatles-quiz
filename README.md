@@ -366,6 +366,16 @@ Steps needed to deploy
 
  ### Content
 
+ * The quiz is mainly inspired from a quiz by [Web Dev Simplified](https://www.youtube.com/watch?v=riDzcEQbX6k)
+
+ * The scoring system is mainly inspired from [Love Maths](https://github.com/Code-Institute-Org/love-maths)
+
+* How to shuffle the answers is done with inspiration from [Stack Overflow](https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)
+and this video [Crypters Infotech](https://www.youtube.com/watch?v=shVEIHKhlZE )
+
+* How to get different points depending on difficult level is done with inspiration from [MS 2 quiz](https://github.com/mateuszniechwiej/MS-2-Quiz-game/blob/master/assets/js/game.js) 
+
+* The timer is implemented with inspiration from [Balen Nouris CL Quiz](https://balennouri.github.io/balennouri-project2/index.html) and [Coding Nepals Quiz App](https://www.youtube.com/watch?v=pQr4O1OITJo&t=1687s)
  <a id=media></a>
 
  ### Media
