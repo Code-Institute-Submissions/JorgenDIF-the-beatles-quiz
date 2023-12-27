@@ -19,6 +19,8 @@ Remember the harder the difficulty the more points you get!🎸
 
 [Link to the website](https://jorgendif.github.io/the-beatles-quiz/index.html)
 
+![Alt text](assets/images/quiz-main-beatles.png)
+
 # Content
 
 **Table of content:**
@@ -143,6 +145,20 @@ Remember the harder the difficulty the more points you get!🎸
 - Expansion of Game Modes: The quiz should evolve to introduce new game modes or features to keep frequent users engaged.
 - Diversification to Other Artists: As a long-term user, there might be an interest in expanding the quiz to include questions about other artists or providing links to quizzes about similar bands.
 - These user experience goals ensure that the quiz caters to the needs and preferences of different types of users, offering a well-rounded and engaging experience for all.
+
+<a id="design">
+
+
+### Design
+ My main focus is on keeping things clean and simple.
+
+* I've embraced a minimalist design using a black and white color palette.
+  ![Alt text](assets/images/color-palette.png)
+
+* The font-family is set to Arial, Helvetica, sans-serif, ensuring simplicity in typography.
+
+* The deliberate use of opacity in the background images adds a touch of sophistication, maintaining an overall sense of simplicity and cleanliness.
+
 
 <a id="feauters">
 
