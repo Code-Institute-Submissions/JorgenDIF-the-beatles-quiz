@@ -153,7 +153,7 @@ Remember the harder the difficulty the more points you get!🎸
  My main focus is on keeping things clean and simple.
 
 * I've embraced a minimalist design using a black and white color palette.
- [Color Palette](assets/images/color-palette1.png)
+![Color Palette](assets/images/color-palette1.png)
 
 * The font-family is set to Arial, Helvetica, sans-serif, ensuring simplicity in typography.
 
