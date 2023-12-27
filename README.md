@@ -351,6 +351,34 @@ Steps needed to deploy
 * Click on the save button.
 * If any changes are required, they can be done, commited and pushed to GitHub and the changes  will be updated.
 
+<a id=local-deployment></a>
+
+### Local Deployment
+
+* Since I'm using VsCode my code is available locally
+
+<a id=credit></a>
+
+# Credit
+ 
+
+ <a id="credit-content"></a>
+
+ ### Content
+
+ <a id=media></a>
+
+ ### Media
+
+ <a id=thank-you></a>
+
+### Thank You
+
+* My wife and family
+* My Mentor
+* Slack Community
+* John,Paul,George and Ringo
+
 
 
 
