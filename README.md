@@ -378,7 +378,15 @@ and this video [Crypters Infotech](https://www.youtube.com/watch?v=shVEIHKhlZE )
 * The timer is implemented with inspiration from [Balen Nouris CL Quiz](https://balennouri.github.io/balennouri-project2/index.html) and [Coding Nepals Quiz App](https://www.youtube.com/watch?v=pQr4O1OITJo&t=1687s)
  <a id=media></a>
 
+ * The questions is done with help from [Wikipedia](https://sv.wikipedia.org/wiki/Portal:Huvudsida) and [Google](https://www.google.com/webhp?hl=sv&sa=X&sqi=2&pjf=1&ved=0ahUKEwiQzf3sjK-DAxUJgf0HHS-gDMYQPAgJ)
+
  ### Media
+
+ * The background image is borrowed from [Alpha Coders](https://in.pinterest.com/pin/722827808962805497/)
+
+ * The Beatles logo is from [Creative Bloq](https://www.creativebloq.com/news/the-beatles-logo)
+
+ * The music is from [Spotify](https://www.spotify.com/se/premium/?utm_source=se_brand_contextual_text&utm_medium=paidsearch&utm_campaign=alwayson_europe_se_performancemarketing_core_brand+contextual+text+exact+se+google&gad_source=1&gclid=Cj0KCQiAkKqsBhC3ARIsAEEjuJjHmhyVqcQPHK9Ng9q9lGzbfD1q1STkXI17v62YQWZP8-M1W6Q8-usaAshJEALw_wcB&gclsrc=aw.ds)
 
  <a id=thank-you></a>
 
@@ -388,6 +396,7 @@ and this video [Crypters Infotech](https://www.youtube.com/watch?v=shVEIHKhlZE )
 * My Mentor
 * Slack Community
 * John,Paul,George and Ringo
+* Spotify 
 
 
 
