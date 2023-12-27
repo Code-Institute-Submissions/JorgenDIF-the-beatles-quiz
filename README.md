@@ -37,6 +37,7 @@ Remember the harder the difficulty the more points you get!🎸
   - [First Time User](#first-time-user)
   - [Returning User](#returning-user)
   - [Frequent User](#frequent-user)
+  - [Design](#design)
 - [Feauters](#feauters)
   - [The Main Page 1](#maine-page1)
   - [The Main Page 2](#maine-page2)
@@ -49,6 +50,7 @@ Remember the harder the difficulty the more points you get!🎸
 - [Technologies](#technologies)
   - [Language](#language)
   - [Tools](#tools)
+  - [Frameworks & Libaries](#frameworks-libaries) 
 - [Testing](#testing)
   - [Manual Testing](#manual-testing)
   - [Lighthouse](#lighthouse)
@@ -262,6 +264,12 @@ This is the High Score Page! Find out if you've made it to the top 5 and see you
 * CSS Validator: Utilized for validating CSS code.
 * HTML Validator: Used for validating HTML code.
 * Am I Responsive: Employed for testing and ensuring responsiveness.
+
+<a id="frameworks-libaries">
+
+### Frameworks & Libaries
+
+* [Favicon](https://favicon.io/)
 
 <a id="testing">
 
