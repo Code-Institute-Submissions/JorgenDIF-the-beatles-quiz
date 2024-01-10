@@ -394,7 +394,9 @@ Steps needed to deploy
 
  * The quiz is mainly inspired from a quiz by [Web Dev Simplified](https://www.youtube.com/watch?v=riDzcEQbX6k)
 
- * The scoring system is mainly inspired from [Love Maths](https://github.com/Code-Institute-Org/love-maths)
+ * The scoring system is  inspired from [Love Maths](https://github.com/Code-Institute-Org/love-maths)
+
+ * The implementation of the end and highscore sites in this project is based on the tutorial by James Q Quick. You can find the tutorial on his YouTube channel [James Q Quick Quiz](https://www.youtube.com/watch?v=u98ROZjBWy8&t=7s)
 
 * How to shuffle the answers is done with inspiration from [Stack Overflow](https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)
 and this video [Crypters Infotech](https://www.youtube.com/watch?v=shVEIHKhlZE )

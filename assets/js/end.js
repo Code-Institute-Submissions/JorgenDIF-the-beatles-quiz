@@ -1,3 +1,11 @@
+/*
+  High Score Saving and Redirection Script
+
+  This file is used to save the high score and redirect to the highscores page.
+  Implementation inspired by James Q Quick's tutorial on YouTube.
+  Tutorial Link: https://www.youtube.com/watch?v=DFhmNLKwwGw&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=9
+*/
+
 const username = document.getElementById("username");
 const saveScoresBtn = document.getElementById("saveScoresBtn");
 const finalScore = document.getElementById("finalScore");
